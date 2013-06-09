@@ -1,0 +1,28 @@
+razer-bw-te-ctl
+
+This program makes it possible to change the configuration of your Razer
+BlackWidow Tournament Edition keybooard from within Linux, *BSD or any other
+POSIX-compatible system supported by libusb.
+
+Make sure to let the Windows Razer Synapse tool upgrade the firmware to the
+newest version before running the program.  There might be some issues otherwise
+due to protocol changes, although I don't really deem it very probable.
+
+Run `razer-bw-te-ctl --help' or `man razer-bw-te-ctl' for usage information.
+
+Installation
+============
+Build dependencies: cmake >= 2.8.5, help2man, libusb >= 1.0
+
+$ git clone git://github.com/pjanouch/razer-bw-te-ctl.git
+$ cd razer-bw-te-ctl
+$ mkdir build
+$ cd build
+$ cmake .. -DCMAKE_INSTALL_PREFIX=/usr
+# make install
+
+Note that there's no "make uninstall".
+
+For Debian-based distros, you can do the following instead of the last step:
+$ cpack -G DEB
+# dpkg -i razer-bw-te-ctl-*.deb
