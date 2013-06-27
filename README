@@ -26,3 +26,5 @@ Note that there's no "make uninstall".
 For Debian-based distros, you can do the following instead of the last step:
 $ fakeroot cpack -G DEB
 # dpkg -i razer-bw-te-ctl-*.deb
+
+Leave out the fakeroot for CMake >= 2.8.9, it's been fixed since.
